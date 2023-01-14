@@ -1,0 +1,107 @@
+<!-- These are notes -->  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatPhotoSite</title>
+</head>
+<body>
+  <main> <!--Used to identify the main part of your page for SEO-->
+    <h1>CatPhotoApp</h1>
+    <section> <!--used to identify the sections of your page-->
+      <h2>Cat Photos</h2>
+
+      <!--the target attribute in the <a> tag with value _blank makes the link open in a new tab-->
+      <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+
+      <!--In img tag the `alt` attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.-->
+      <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+    </section>
+    <section>
+      <h2>Cat Lists</h2>
+      <h3>Things cats love:</h3>
+      <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <!--The figure tag represents self-contained content and will allow you to associate an image with a caption.-->
+      <figure> 
+
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+
+        <!--<em> tag italicizes enclosed text-->
+        <!--adds a caption to element in figure tag-->
+        <figcaption>Cats <em>love</em> lasagna.</figcaption> 
+
+      </figure>
+      <h3>Top 3 things cats hate:</h3>
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+
+        <!--<strong> tag bolds the enclosed text-->
+        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+
+      </figure>
+    </section>
+    <section>
+      <h2>Cat Form</h2>
+      
+      <!--<form> tag creates a form section where users can input info-->
+      <!--The action attribute indicates where form data should be sent.-->
+      <form action="https://freecatphotoapp.com/submit-cat-photo"> 
+        
+        <!--The fieldset element is used to group related inputs and labels together in a web form.-->
+        <fieldset>
+          
+          <!--The legend element acts as a caption for the content in the fieldset element.-->
+          <legend>Is your cat an indoor or outdoor cat?</legend>
+
+
+          <!--<input> tag, self closing, lets you accept user input-->
+
+          <!--type attribute lets you choose what kind of input to receive from users i.e. text, checkbox and radio-->
+
+          <!--You can use radio buttons for questions where you want only one answer out of multiple options.-->
+
+          <!--To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value-->
+
+          <!--If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes. Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons.-->
+          <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+          <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>What's your cat's personality?</legend>
+
+          <!--for attribute associates the text in the tag to the id-->
+          <!--add name attributes to input to help servers process the form-->
+          <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+          <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+          <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+
+        </fieldset>
+
+        <!--when using text attribute inputs, you can add a placeholder attribute to fill in the input box prompting users what kind of information to type in box-->
+        <!--add required attribute to prevent a user from submitting your form when required information is missing-->
+        <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>
+      No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+    </p>
+  </footer>
+</body>
+</html>
